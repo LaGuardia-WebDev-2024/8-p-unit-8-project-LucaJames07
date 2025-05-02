@@ -20,6 +20,10 @@ var count = 0;
 mouseClicked = function(){
 
 drawFish(random(0,1200),random(0,800));
+drawBubble(random(0,1200),random(0,800));
+drawBubble(random(0,1200),random(0,800));
+drawCrab(random(0,1200),random(750,800));
+drawShell(random(0,1200),random(750,800));
 
 count++;
 if (count>19) {
@@ -43,6 +47,20 @@ var drawFish = function(fishX, fishY, fishColor){
   text("𓆝", fishX, fishY);
 };
 
+var drawBubble = function(bubbleX, bubbleY){
+  fill(20,200,200,100)
+  ellipse(bubbleX, bubbleY, 30, 30);
+};
 
+var drawCrab = function(crabX, crabY, crabColor){
+  textSize(random(60,180));
+  fill(crabColor);
+  text("🦀", crabX, crabY);
+};
 
+var drawShell = function(shellX, shellY, shellColor){
+  textSize(random(20,50));
+  fill(shellColor);
+  text("🐚", shellX, shellY);
+};
 
